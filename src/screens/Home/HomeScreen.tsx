@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, FlatList, TextInput, Text, ActivityIndicator } from 'react-native';
-import { usePokemonSearch } from '../hooks/usePokemonSearch';
-import PokemonItem from '../components/PokemonItem';
-import styles from '../styles/HomeScreenStyles';
+import { usePokemonSearch } from '../../hooks/usePokemonSearch';
+import PokemonItem from '../../components/PokemonItem';
+import styles from './HomeScreenStyles';
 
 const HomeScreen = () => {
   const { filteredPokemonList, handleSearchChange, txtSearchField, loading } = usePokemonSearch(); 
@@ -23,7 +23,7 @@ const HomeScreen = () => {
       {/* Pokemon List*/}
       {loading ? (
         <View style={styles.loaderContainer}>
-          <ActivityIndicator size="large" color="#F7CD46" />
+          <ActivityIndicator size="large" color="#F7CD46" testID='loader'/>
         </View>
       ) :
         filteredPokemonList.length === 0 ? (

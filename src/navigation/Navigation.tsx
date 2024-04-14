@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import HomeScreen from '../screens/HomeScreen';
-import DetailScreen from '../screens/DetailScreen';
+import HomeScreen from '../screens/Home/HomeScreen';
+import DetailScreen from '../screens/Detail/DetailScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -21,8 +21,8 @@ const Navigation = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerTitleAlign: 'left', headerStyle: styles.header, headerTitle: headerTitleComponent }}>
-        <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Navigator screenOptions={{ headerStyle: styles.header }}>
+        <Stack.Screen name="Home" component={HomeScreen} options={{ headerTitleAlign: 'left', headerTitle: headerTitleComponent}}/>
         <Stack.Screen name="Details" component={DetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>

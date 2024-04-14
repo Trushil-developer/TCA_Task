@@ -11,9 +11,9 @@ export async function fetchPokemonList() {
   }
 }
 
-export async function fetchPokemonDetails(id: number) {
+export async function fetchPokemonDetails(name: String) {
   try {
-    const response = await axios.get(`${API_BASE_URL}/pokemon/${id}`);
+    const response = await axios.get(`${API_BASE_URL}/pokemon/${name}`);
     return response.data;
   } catch (error) {
     throw new Error('Failed to fetch Pokemon details');
