@@ -12,7 +12,7 @@ const ErrorMessage = ({ message }) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#FF6347', // Tomato color
+    backgroundColor: '#FF6347', 
     padding: 10,
     borderRadius: 5,
     marginVertical: 10,

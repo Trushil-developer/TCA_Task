@@ -17,12 +17,12 @@ type DetailScreenProps = {
 };
 
 type PokemonDetails = {
-  name: string;
-  types: { type: { name: string } }[];
-  height: number;
-  weight: number;
-  abilities: { ability: { name: string } }[];
-  sprites: { front_default?: string };
+  name?: string;
+  types?: { type: { name: string } }[];
+  height?: number;
+  weight?: number;
+  abilities?: { ability: { name: string } }[];
+  sprites?: { front_default?: string };
 };
 
 const DetailScreen = ({ route }: DetailScreenProps) => {
@@ -36,26 +36,25 @@ const DetailScreen = ({ route }: DetailScreenProps) => {
       try {
         setLoading(true);
         const details = await fetchPokemonDetails(pokemon);
-        
         setPokemonDetails(details);
-         setError(null);
+        setError(null);
       } catch (error) {
         console.error('Error fetching Pokemon details:', error.message);
-         setError('Failed to fetch Pokémon details'); 
+        setError('Failed to fetch Pokémon details');
       } finally {
         setLoading(false);
       }
     };
     fetchDetails();
   }, [pokemon]);
-  
-  
+
+
   return (
     <View style={styles.container}>
       {loading ? (
         <ActivityIndicator size="large" color="#E63F34" testID='loading-indicator'/>
       ) : error ? (
-        <ErrorMessage message={error} /> 
+        <ErrorMessage message={error} />
       ): pokemonDetails && (
         <>
           <View style={styles.topHalf}>

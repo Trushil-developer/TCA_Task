@@ -1,6 +1,6 @@
-import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const windowWidth = Dimensions.get('window').width;
 const itemWidth = (windowWidth - 30) / 2;
@@ -10,15 +10,14 @@ type PokemonItemProps = {
 }
 
 const PokemonItem = ({ name }: PokemonItemProps) => {
-    const navigation = useNavigation()
+    const navigation = useNavigation();
+    const data = { pokemon: name };
+
     return (
         <TouchableOpacity
             testID='pokemon-item'
-            onPress={() =>
-                navigation.navigate('Details', {
-                    pokemon: name,
-                })
-            }>
+            onPress={() => navigation.navigate('Details', data)}
+        >
             <View style={styles.container}>
                 <View style={styles.item}>
                     <Image

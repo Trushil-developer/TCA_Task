@@ -37,4 +37,27 @@ export default StyleSheet.create({
     fontSize: 18,
     color: '#fff',
   },
+  paginationContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 20,
+    paddingHorizontal: 20,
+  },
+  paginationButton: {
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    backgroundColor: '#007AFF',
+    borderRadius: 5,
+  },
+  paginationButtonLeft: {
+    marginRight: 'auto', 
+  },
+  paginationButtonRight: {
+    marginLeft: 'auto',
+  },
+  paginationButtonText: {
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+  },
 });
