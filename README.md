@@ -4,8 +4,11 @@
 
 This project is a simple React Native application that demonstrates the use of React Native technologies to interact with the Pokemon API (https://pokeapi.co). The application allows users to search for Pokemon, view their sprites and names, and see detailed statistics for each Pokemon.
 
-# Design
+# Design in iOS & Android
+<img width="500" alt="Screenshot 2024-04-15 at 22 51 34" src="https://github.com/Trushil-developer/TCA_Task/assets/150373213/ba81c6e2-784a-4633-88f0-c2e3370ee2de">
 
+
+# Pockemon List, Details & Search functionality  
 <img src="https://github.com/Trushil-developer/TCA_Task/assets/150373213/84f25858-aaff-4f86-bcd1-fc5524f47acb" alt="Simulator Screenshot - iPhone SE (3rd generation) - 2024-04-15 at 19 52 01" width="200" height="400">
 <img src="https://github.com/Trushil-developer/TCA_Task/assets/150373213/ebc84a06-7bcb-4e53-ba87-27290afadc33" alt="Simulator Screenshot - iPhone SE (3rd generation) - 2024-04-15 at 19 51 37" width="200" height="400">
 <img src="https://github.com/Trushil-developer/TCA_Task/assets/150373213/3a720134-e996-4092-90b8-25a3bed04b77" alt="Simulator Screenshot - iPhone SE (3rd generation) - 2024-04-15 at 19 51 51" width="200" height="400">
@@ -20,8 +23,8 @@ Technologies Used:
 React Native,
 React Navigation,
 Axios (for API requests),
-Additional Libraries
-
+Additional Libraries,
+Unit testing
 
 # Getting Started
 
